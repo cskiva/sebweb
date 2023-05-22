@@ -1,17 +1,24 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
+    title: 'Write In Stone',
+    description: `The app featured a seamless interface and underwent agile iterations, 
+		reflecting the dynamic nature of the journalistic landscape. It skillfully embarked on a sensory journey, 
+		capturing the intrinsic beauty of each moment and preserving stories with finesse. Adapting promptly through timely updates, 
+		it efficiently met the evolving demands of the industry. Users appreciated its intuitive controls, 
+		superior visual quality, and the profound impact it facilitated in storytelling. 
+		WriteInStone's transformative capabilities transcended limitations, empowering journalists with endless possibilities.`,
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    title: 'Artwork',
+    description: `Sebastian Grant, an Australian artist, is renowned for his distinctive approach to art that
+	   involves distilling art history into rhythmically created multi-media surrealism. His collection of works
+	    spans an impressive 15-year period, showcasing his evolution and mastery of various artistic mediums. 
+		Grant's artistic endeavors encompass a wide range of mediums, including traditional techniques such as oil paint, 
+		as well as innovative forms like sound design. Through his unique artistic vision, Grant seamlessly weaves together 
+		elements of art history, resulting in mesmerizing and thought-provoking creations that push the boundaries of artistic expression.
+		 His work invites viewers to delve into a world where familiar imagery merges with a surreal and rhythmic tapestry of artistic exploration.`,
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
   },

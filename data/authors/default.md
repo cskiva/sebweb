@@ -9,8 +9,6 @@ linkedin: https://www.linkedin.com
 github: https://github.com
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Sebastian Grant is a multi-talented individual who effortlessly blends his skills as a UX Designer, fine artist, and musician to create captivating and user-centric experiences. With a background in music production, Sebastian has always been drawn to the intersection of art and technology. In 2018, he achieved a significant milestone when he co-launched the groundbreaking product 'Stone' alongside Austin Mackell, garnering recognition and praise in the industry.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Sebastian's approach is grounded in humility and a genuine desire to make a difference. He understands the importance of combining artistry, technology, and community engagement to create something truly meaningful. Sebastian Grant, or Sebweb as he is fondly known, is on a mission to enhance user experiences while nurturing connections and empowering others along the way.
