@@ -1,12 +1,11 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Sebastian Grant
+avatar: https://s.gravatar.com/avatar/f6324e583741ef35221578a7ac8809d6?s=80
+occupation: UX/UI Designer and Artist
+company: Sebweb
+email: sebastianlgrant@gmail.com
+linkedin: https://www.linkedin.com/in/sebweb
+github: https://github.com/cskiva
 ---
 
 Sebastian Grant is a multi-talented individual who effortlessly blends his skills as a UX Designer, fine artist, and musician to create captivating and user-centric experiences. With a background in music production, Sebastian has always been drawn to the intersection of art and technology. In 2018, he achieved a significant milestone when he co-launched the groundbreaking product 'Stone' alongside Austin Mackell, garnering recognition and praise in the industry.

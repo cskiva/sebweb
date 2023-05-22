@@ -2,14 +2,14 @@ import Footer from './Footer'
 import Link from './Link'
 import Logo from '@/data/logo.svg'
 import MobileNav from './MobileNav'
-import SectionContainer from './SectionContainer'
+import SiteContainer from './SiteContainer'
 import ThemeSwitch from './ThemeSwitch'
 import headerNavLinks from '@/data/headerNavLinks'
 import siteMetadata from '@/data/siteMetadata'
 
 const LayoutWrapper = ({ children }) => {
   return (
-    <SectionContainer>
+    <SiteContainer>
       <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div>
@@ -47,7 +47,7 @@ const LayoutWrapper = ({ children }) => {
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>
-    </SectionContainer>
+    </SiteContainer>
   )
 }
 
