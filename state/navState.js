@@ -1,6 +1,4 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-
-import { RootState } from './_store'
+import { createSlice } from '@reduxjs/toolkit'
 
 const navStateSlice = createSlice({
   name: 'navState',
@@ -16,19 +14,13 @@ const navStateSlice = createSlice({
     },
   },
   reducers: {
-    setCurrentExchangeRate: (
-      state: { value: { currentExchangeRate: number } },
-      action: PayloadAction<number>
-    ) => {
+    setCurrentExchangeRate: (state, action) => {
       state.value.currentExchangeRate = action.payload
     },
-    setCartOpen: (state: { value: { cartOpen: boolean } }, action: PayloadAction<boolean>) => {
+    setCartOpen: (state, action) => {
       state.value.cartOpen = action.payload
     },
-    setCurrentCountryAndCurrency: (
-      state: { value: { currentCountry: string; currentCurrency: string } },
-      action: PayloadAction<string>
-    ) => {
+    setCurrentCountryAndCurrency: (state, action) => {
       state.value.currentCountry = action.payload
 
       console.log('Setting Country')
@@ -45,24 +37,15 @@ const navStateSlice = createSlice({
         state.value.currentCountry = 'AU'
       }
     },
-    setCurrentShippingRate: (
-      state: { value: { currentShippingRate: number } },
-      action: PayloadAction<number>
-    ) => {
+    setCurrentShippingRate: (state, action) => {
       state.value.currentShippingRate = action.payload
     },
-    setCurrentShippingName: (
-      state: { value: { currentShippingName: string } },
-      action: PayloadAction<string>
-    ) => {
+    setCurrentShippingName: (state, action) => {
       state.value.currentShippingName = action.payload
     },
-    setCurrentOrderNumber: (
-      state: { value: { currentOrderNumber: number } },
-      action: PayloadAction<number>
-    ) => {
+    setCurrentOrderNumber: (state, action) => {
       state.value.currentOrderNumber = action.payload
-      localStorage.setItem('currentOrderNumber', action.payload as unknown as string)
+      localStorage.setItem('currentOrderNumber', action.payload)
     },
   },
 })
@@ -78,18 +61,16 @@ export const {
 } = navStateSlice.actions
 
 // Selectors
-export const getCurrentCountry = (state: RootState) =>
-  state.combinedReducer.navState.value.currentCountry
-export const getCurrentCurrency = (state: RootState) =>
-  state.combinedReducer.navState.value.currentCurrency
-export const getCurrentExchangeRate = (state: RootState) =>
+export const getCurrentCountry = (state) => state.combinedReducer.navState.value.currentCountry
+export const getCurrentCurrency = (state) => state.combinedReducer.navState.value.currentCurrency
+export const getCurrentExchangeRate = (state) =>
   state.combinedReducer.navState.value.currentExchangeRate
-export const getCurrentShippingRate = (state: RootState) =>
+export const getCurrentShippingRate = (state) =>
   state.combinedReducer.navState.value.currentShippingRate
-export const getCurrentShippingName = (state: RootState) =>
+export const getCurrentShippingName = (state) =>
   state.combinedReducer.navState.value.currentShippingName
-export const getCurrentOrderNumber = (state: RootState) =>
+export const getCurrentOrderNumber = (state) =>
   state.combinedReducer.navState.value.currentOrderNumber
-export const getCartOpen = (state: RootState) => state.combinedReducer.navState.value.cartOpen
+export const getCartOpen = (state) => state.combinedReducer.navState.value.cartOpen
 
 export default navStateSlice.reducer

@@ -1,8 +1,11 @@
+import { getCartOpen, setCartOpen } from '@/state/navState'
+import { useAppDispatch, useAppSelector } from '@/state/hooks'
 import { useEffect, useState } from 'react'
 
 const CartIcon = () => {
   const [mounted, setMounted] = useState(false)
-  const [cartOpen, setCartOpen] = useState(false)
+  const dispatch = useAppDispatch()
+  const cartOpen = useAppSelector(getCartOpen)
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
@@ -12,7 +15,7 @@ const CartIcon = () => {
       aria-label="Toggle Dark Mode"
       type="button"
       className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
-      onClick={() => setCartOpen(!cartOpen)}
+      onClick={() => dispatch(setCartOpen(!cartOpen))}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

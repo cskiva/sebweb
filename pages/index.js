@@ -4,7 +4,7 @@ import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-// import {getAppSelector} from "@/state/hooks"
+import { getAppSelector } from '@/state/hooks'
 import siteMetadata from '@/data/siteMetadata'
 
 const MAX_DISPLAY = 2
