@@ -8,7 +8,7 @@ const projectsData = [
 		superior visual quality, and the profound impact it facilitated in storytelling. 
 		WriteInStone's transformative capabilities transcended limitations, empowering journalists with endless possibilities.`,
     imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    href: 'https://www.writeinstone.com/',
   },
   {
     title: 'Artwork',
