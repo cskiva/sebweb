@@ -7,6 +7,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const [error, setError] = useState(false)
   const [message, setMessage] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const [hasFocus, setHasFocus] = useState(false)
 
   const subscribe = async (e) => {
     e.preventDefault()
@@ -36,7 +37,9 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 
   return (
     <div>
-      <div className="pb-1 text-lg font-semibold text-gray-800 dark:text-gray-100">{title}</div>
+      <div className="pb-1 text-center text-lg font-semibold text-gray-800 dark:text-gray-100 md:text-left">
+        {title}
+      </div>
       <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
@@ -44,23 +47,33 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
           </label>
           <input
             autoComplete="email"
-            className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
+            className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-transparent dark:focus:bg-primary-500/[.04] md:w-96"
             id="email-input"
             name="email"
             placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
             ref={inputEl}
             required
             type="email"
+            onFocus={() => setHasFocus(!hasFocus)}
+            onBlur={() => setHasFocus(!hasFocus)}
             disabled={subscribed}
+            style={{
+              marginBottom: '-1px',
+              minHeight: '50px',
+            }}
           />
         </div>
         <div className="mt-2 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-3">
           <button
-            className={`w-full rounded-md bg-primary-500 py-2 px-4 font-medium text-white sm:py-0 ${
-              subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
+            className={`w-full rounded-md bg-blue-500 py-2 px-4 font-medium text-white sm:py-0 ${
+              subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-blue-600'
             } focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 dark:ring-offset-black`}
             type="submit"
             disabled={subscribed}
+            style={{
+              boxShadow: !hasFocus ? '0px 0px 300px 30px #0ff0ff90' : '0px 0px 10px 0px #0ff0ff10',
+              transition: 'box-shadow 0.5s ease',
+            }}
           >
             {subscribed ? 'Thank you!' : 'Sign up'}
           </button>

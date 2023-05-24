@@ -4,9 +4,10 @@ import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+// import {getAppSelector} from "@/state/hooks"
 import siteMetadata from '@/data/siteMetadata'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 2
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -20,6 +21,11 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <div className="mb-8 flex aspect-video w-full items-center justify-center rounded-md bg-gradient-to-t from-cyan-500 to-blue-500">
+            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Welcome
+            </h1>
+          </div>
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
@@ -80,7 +86,7 @@ export default function Home({ posts }) {
         </ul>
       </div>
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
+        <div className="mb-5 flex justify-center text-base font-medium leading-6 md:mb-0 md:justify-end">
           <Link
             href="/blog"
             className="text-blue-500 hover:text-blue-600 dark:text-primary-500 dark:hover:text-primary-400"
@@ -90,11 +96,13 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
+      <div className="my-8 flex aspect-video w-full items-center justify-center rounded-md bg-gradient-to-t from-cyan-500/[0.1] to-blue-500/[0.1]">
+        {siteMetadata.newsletter.provider !== '' && (
+          <div className="flex items-center justify-center">
+            <NewsletterForm />
+          </div>
+        )}
+      </div>
     </>
   )
 }

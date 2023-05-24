@@ -1,3 +1,4 @@
+import CartIcon from './CartIcon'
 import Footer from './Footer'
 import Link from './Link'
 import Logo from '@/data/logo.svg'
@@ -41,6 +42,7 @@ const LayoutWrapper = ({ children }) => {
               ))}
             </div>
             <ThemeSwitch />
+            <CartIcon />
             <MobileNav />
           </div>
         </header>

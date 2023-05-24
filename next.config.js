@@ -57,9 +57,9 @@ module.exports = withBundleAnalyzer({
     domains: ['s.gravatar.com'],
   },
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   eslint: {
-    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts', 'state'],
   },
   async headers() {
     return [
