@@ -9,10 +9,12 @@ export default function Modal({ children, title, showing }) {
 
   return (
     <div
-      className={` absolute right-1 min-w-[50%] mr-[-4px] z-50 text-right border-t-2 border-black overflow-hidden `}
+      className={` absolute right-1 min-w-[50%] mr-[-4px] z-50 text-right border-t-2 border-black overflow-hidden transition-opacity ${
+        !cartOpen && 'opacity-0'
+      } `}
     >
       <div
-        className={`dark:bg-black/[0.3] bg-white duration-500 p-5 transition-transform ease-in-out ${
+        className={`dark:bg-gray-800 bg-white duration-500 p-5 transition-transform ease-in-out ${
           !cartOpen && 'translate-y-[-100%]'
         }`}
       >

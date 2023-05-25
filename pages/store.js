@@ -17,7 +17,7 @@ export default function Projects() {
             <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Handpainted Tees.</p>
           </div>
           <div className="container py-12">
-            <div className="-m-4 flex flex-wrap grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div className="-m-4 flex flex-wrap grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
               {shirtsData.map((d) => (
                 <ShoppingCard
                   key={d.title}
@@ -43,7 +43,7 @@ export default function Projects() {
             </p>
           </div>
           <div className="container py-12">
-            <div className="-m-4 flex flex-wrap grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div className="-m-4 flex flex-wrap grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
               {artData.map((d) => (
                 <ShoppingCard
                   key={d.title}

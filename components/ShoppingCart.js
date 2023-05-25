@@ -33,11 +33,11 @@ export default function ShoppingCart() {
       <div id="items-render" className="mb-3">
         {items.map((item) => {
           return (
-            <section key={item.name} className="flex gap-3 my-2 items-center">
+            <section key={item.name} className="flex gap-3 my-4 items-center">
               <Image
                 src={item.imgSrc}
-                width={64}
-                height={64}
+                width={57}
+                height={57}
                 className="rounded-full overflow-hidden"
                 alt="..."
               />
