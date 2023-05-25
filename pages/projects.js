@@ -14,10 +14,10 @@ export default function Projects() {
   const TextSlide = ({ title, text }) => (
     <div
       key={1}
-      className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center min-h-[30%] md:max-w-[33%] min-w-[33%] flex items-center justify-center flex-col"
+      className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center flex items-center justify-center flex-col"
     >
-      <h2 className="font-bold">{title}</h2>
-      <p>{text}</p>
+      <h2 className="font-bold text-3xl leading-14">{title}</h2>
+      <p className="text-xl max-w-[50%]">{text}</p>
     </div>
   )
   const devItems = [
@@ -78,16 +78,6 @@ export default function Projects() {
       item: (
         <TextSlide
           key={1}
-          title="Offgrid"
-          text="Farming, Carpentry, Sculpture, Mechanics, Building"
-        />
-      ),
-      icon: <GiWoodCabin />,
-    },
-    {
-      item: (
-        <TextSlide
-          key={1}
           title="Draughting/Drawings"
           text="Portraits, Nib-pen, Caligraphy, Realism, Architectural"
         />
@@ -103,6 +93,16 @@ export default function Projects() {
         />
       ),
       icon: <FaMusic />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="Offgrid"
+          text="Farming, Carpentry, Sculpture, Mechanics, Building"
+        />
+      ),
+      icon: <GiWoodCabin />,
     },
   ]
 
