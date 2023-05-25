@@ -3,6 +3,7 @@ import { FaMusic, FaNodeJs, FaPaintBrush, FaReact } from 'react-icons/fa'
 import { AiOutlineCode } from 'react-icons/ai'
 import { BsFillEasel2Fill } from 'react-icons/bs'
 import Card from '@/components/Card'
+import CarouselGeneric from '@/components/CarouselGeneric'
 import { DiMongodb } from 'react-icons/di'
 import { GiWoodCabin } from 'react-icons/gi'
 import { PageSEO } from '@/components/SEO'
@@ -10,6 +11,101 @@ import projectsData from '@/data/projectsData'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function Projects() {
+  const TextSlide = ({ title, text }) => (
+    <div
+      key={1}
+      className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center min-h-[30%] md:max-w-[33%] min-w-[33%] flex items-center justify-center flex-col"
+    >
+      <h2 className="font-bold">{title}</h2>
+      <p>{text}</p>
+    </div>
+  )
+  const devItems = [
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="React/NextJs/Express"
+          text="Frontend, CSS, HTML, API, Functions, JSON, Redux"
+        />
+      ),
+      icon: <FaReact />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="MongoDB/Firebase"
+          text="Database, Collections, CMS Creation, Dynamic Data"
+        />
+      ),
+      icon: <DiMongodb />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="React/NextJs/Express"
+          text="Frontend, CSS, HTML, API, Functions, JSON, Redux"
+        />
+      ),
+      icon: <FaNodeJs />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="3D/Interfaces/Design"
+          text="Sketch/Illustrator/Figma, Vector-Mockup, 3D Rendering and Modelling, Traditional Drawing"
+        />
+      ),
+      icon: <AiOutlineCode />,
+    },
+  ]
+
+  const artItems = [
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="Painting/Murals"
+          text="Oils, Acrylics, POSCA, Realism, Designs, Copies and Originals"
+        />
+      ),
+      icon: <FaPaintBrush />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="Offgrid"
+          text="Farming, Carpentry, Sculpture, Mechanics, Building"
+        />
+      ),
+      icon: <GiWoodCabin />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="Draughting/Drawings"
+          text="Portraits, Nib-pen, Caligraphy, Realism, Architectural"
+        />
+      ),
+      icon: <BsFillEasel2Fill />,
+    },
+    {
+      item: (
+        <TextSlide
+          key={1}
+          title="Music/Production"
+          text="DAW Composition, Live-Recording, Soundtrack, Interfaces, Vocals, Peformance"
+        />
+      ),
+      icon: <FaMusic />,
+    },
+  ]
+
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -20,42 +116,22 @@ export default function Projects() {
             Code
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {/* Showcase your projects with a hero image (16 x 9) */}At the Computer.
+            Applications, Websites, Designs, Interfaces.
           </p>
         </div>
-        <div className="mb-8 flex aspect-video w-full items-center justify-around rounded-md bg-gradient-to-t from-cyan-500 to-blue-500 flex-col">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Full Stack Developer
-          </h1>
-          <div className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center min-h-[30%] md:max-w-[33%] min-w-[33%] flex items-center justify-center flex-col">
-            <h2 className="font-bold">React/NextJs/Express</h2>
-            <p>Frontend, CSS, HTML, API, Functions, JSON, Redux</p>
-          </div>
-          <div className="flex gap-5 text-gray-900 text-7xl">
-            <FaReact />
-            <FaNodeJs />
-            <DiMongodb />
-            <AiOutlineCode />
-          </div>
+        <div className="mb-8 flex  w-full items-center justify-between rounded-md bg-gradient-to-t from-cyan-500 to-blue-500">
+          <CarouselGeneric items={devItems} title={'Full Stack Developer'} arrows />
         </div>
-
-        <div className="mb-8 flex aspect-video w-full items-center justify-around rounded-md bg-gradient-to-t from-yellow-500 to-orange-500 flex-col">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Full Stack Artist
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Art
           </h1>
-          <div className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center min-h-[30%] md:max-w-[33%] min-w-[33%] flex items-center justify-center flex-col">
-            <h2 className="font-bold">Painting</h2>
-            <p>
-              Oil Painting, Acrylics, POSCA, Murals, Renaissance, Pop, Surrealism, Cosmic, Copies
-              and Originals.
-            </p>
-          </div>
-          <div className="flex gap-5 text-gray-900 text-7xl">
-            <FaPaintBrush />
-            <GiWoodCabin />
-            <BsFillEasel2Fill />
-            <FaMusic />
-          </div>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Gifts, Meditations, Challenges and Decorations.
+          </p>
+        </div>
+        <div className="mb-8 flex  w-full items-center justify-around rounded-md bg-gradient-to-t from-yellow-500 to-orange-500 flex-col">
+          <CarouselGeneric items={artItems} title={'Full Stack Artist'} arrows />
         </div>
         <div className="space-y-2 pt-6 pb-8 md:space-y-5 border-none">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
