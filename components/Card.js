@@ -4,9 +4,7 @@ import Link from './Link'
 const Card = ({ title, description, imgSrc, href }) => (
   <div className="md p-4 md:w-1/2 " style={{ maxWidth: '544px' }}>
     <div
-      className={`${
-        imgSrc && 'h-full'
-      }  overflow-hidden rounded-full px-3  md:grid-cols-2 grid items-center`}
+      className={`${imgSrc && 'h-full'}  overflow-hidden px-3  md:grid-cols-2 grid items-center`}
     >
       <div className="relative w-full  rounded-full overflow-hidden aspect-square">
         {imgSrc &&

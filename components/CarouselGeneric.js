@@ -23,8 +23,8 @@ export default function CarouselGeneric({ title, items, arrows }) {
   }
 
   return (
-    <div className=" relative w-full flex flex-1 items-end">
-      <div className="aspect-ratio[4/3] block h-8 flex-1 order-2 h-full w-full flex flex-col">
+    <div className=" relative w-full flex flex-1 items-center md:h-auto">
+      <div className="block flex-1 order-2 h-full w-full flex flex-col">
         <div className="flex-1">
           <div className="w-full h-full relative overflow-hidden my-8 md:h-72 h-64">
             {items && items.length > 0 ? (

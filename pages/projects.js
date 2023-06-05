@@ -16,8 +16,8 @@ export default function Projects() {
       key={1}
       className="bg-white/[0.5] p-5 rounded-md text-gray-900 text-center flex items-center justify-center flex-col"
     >
-      <h2 className="font-bold text-3xl leading-14">{title}</h2>
-      <p className="text-xl max-w-[50%]">{text}</p>
+      <h2 className="font-bold md:text-3xl leading-14">{title}</h2>
+      <p className="md:text-xl max-w-[50%]">{text}</p>
     </div>
   )
   const devItems = [
@@ -25,7 +25,7 @@ export default function Projects() {
       item: (
         <TextSlide
           key={1}
-          title="React/NextJs/Express"
+          title="React / NextJs / Express"
           text="Frontend, CSS, HTML, API, Functions, JSON, Redux"
         />
       ),
@@ -45,7 +45,7 @@ export default function Projects() {
       item: (
         <TextSlide
           key={1}
-          title="React/NextJs/Express"
+          title="React/ NextJs / Express"
           text="Frontend, CSS, HTML, API, Functions, JSON, Redux"
         />
       ),
@@ -56,7 +56,7 @@ export default function Projects() {
         <TextSlide
           key={1}
           title="3D/Interfaces/Design"
-          text="Sketch/Illustrator/Figma, Vector-Mockup, 3D Rendering and Modelling, Traditional Drawing"
+          text="Sketch, Illustrator, Vector and 3D Mockup, Traditional Drawing"
         />
       ),
       icon: <AiOutlineCode />,
@@ -110,7 +110,7 @@ export default function Projects() {
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
 
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-3xl sm:px-6 xl:max-w-5xl">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Code

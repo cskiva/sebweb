@@ -19,13 +19,13 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="mb-8 flex aspect-video w-full items-center justify-center rounded-md bg-gradient-to-t from-cyan-500 to-blue-500">
+        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          Welcome
+        </h1>
+      </div>
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-3xl sm:px-6 xl:max-w-5xl">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <div className="mb-8 flex aspect-video w-full items-center justify-center rounded-md bg-gradient-to-t from-cyan-500 to-blue-500">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Welcome
-            </h1>
-          </div>
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>

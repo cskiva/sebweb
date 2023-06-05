@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div>
+      <div className="mx-auto max-w-3xl sm:px-6 xl:max-w-5xl">
         <section className="divide-y divide-gray-200 dark:divide-gray-700">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -33,7 +33,7 @@ export default function Projects() {
             </div>
           </div>
         </section>
-        <section className="divide-y divide-gray-200 dark:divide-gray-700">
+        <section className="divide-y divide-gray-200 dark:divide-gray-700 xl:mb-[100px]">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Paintings and Drawings

@@ -3,7 +3,7 @@ const projectsData = [
     title: 'Write In Stone',
     description: `Write In Stone allowed Journalists, researchers and students to record their on-screen research. It was a feature-rich startup project.`,
     imgSrc: '/static/images/projects/stone/stoneLogo.png',
-    href: 'https://www.writeinstone.com/',
+    href: 'http://localhost:3000/blog/projects/write-in-stone',
   },
   {
     title: 'Artwork',

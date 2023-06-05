@@ -1,9 +1,9 @@
 import Link from '@/components/Link'
+import Pagination from '@/components/Pagination'
 import Tag from '@/components/Tag'
+import formatDate from '@/lib/utils/formatDate'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
-import Pagination from '@/components/Pagination'
-import formatDate from '@/lib/utils/formatDate'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -18,7 +18,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 mx-auto max-w-3xl sm:px-6 xl:max-w-5xl">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}

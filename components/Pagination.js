@@ -5,7 +5,7 @@ export default function Pagination({ totalPages, currentPage }) {
   const nextPage = parseInt(currentPage) + 1 <= parseInt(totalPages)
 
   return (
-    <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+    <div className="space-y-2 pt-6 pb-8 md:space-y-5 mx-auto max-w-3xl sm:px-6 xl:max-w-5xl">
       <nav className="flex justify-between">
         {!prevPage && (
           <button rel="previous" className="cursor-auto disabled:opacity-50" disabled={!prevPage}>

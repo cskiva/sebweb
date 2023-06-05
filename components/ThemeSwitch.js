@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
+
+import useScrollHeightFromTop from '@/helpers/useScrollHeightFromTop'
 import { useTheme } from 'next-themes'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
-
+  const scrollHeight = useScrollHeightFromTop()
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
@@ -19,7 +21,9 @@ const ThemeSwitch = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="text-gray-900 dark:text-gray-100"
+        className={`text-gray-900 dark:text-gray-100 ${
+          scrollHeight > 10 && 'dark:text-gray-900'
+        } transition-colors`}
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
           <path
